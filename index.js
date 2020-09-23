@@ -20,7 +20,8 @@ let istorija = []
 istorija.innerHTML = 
 
 btn.addEventListener('click', () => {
-
+    //cifraPrihod.textContent = `+ ${inputIznos.value}`
+   
     if (select.value == 'prihod') {
         
         const mainDiv = document.createElement('div')
@@ -62,11 +63,11 @@ btn.addEventListener('click', () => {
         
 
         document.querySelector('.cifra-prihod').innerHTML = items1.reduce((a, b) => a + b, 0)
-        cifraPrihod.textContent = `+ ${inputIznos.value}`
+        
     }
 
     else if (select.value == 'rashod') {
-        
+        cifraRashod.textContent = `- ${inputIznos.value}`
         
         const mainDiv2 = document.createElement('div')
         mainDiv2.className = 'mainDiv2'
@@ -106,12 +107,14 @@ btn.addEventListener('click', () => {
         items2.push(inputIznos.value * 1);
         
 
-        document.querySelector('.cifra-rashod').innerHTML = items2.reduce((a, b) => a + b, 0)
-        cifraRashod.textContent = `- ${inputIznos.value}`
+        document.querySelector('.cifra-rashod').innerHTML = items2.reduce((a, b) => a + b,0)
+        
 
     }
-        let ukupnaCifra = document.querySelector('#dostupan-novac') 
-        ukupnaCifra.innerHTML = `+ ${items1 - items2}`       
+    let ukupnaCifra = dostupanNovac 
+        ukupnaCifra.innerHTML = `+ ${items1 - items2}`
+        
+        console.log(typeof ukupnaCifra);
 })
 
 // btnPrikazIstorije.addEventListener('click', function prikaziIstor() {
