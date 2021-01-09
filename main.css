@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  background-color: #f1f5f8;
+  font-family: sans-serif;
+}
+
+#section-one {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #a8aab8;
+  height: 270px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#section-one h1 {
+  position: absolute;
+  top: 20px;
+}
+#section-one #dostupan-novac {
+  position: absolute;
+  top: 10%;
+  font-size: 40px;
+}
+#prikazi-prihod {
+  position: absolute;
+  top: 22%;
+  left: 37%;
+  height: 40px;
+  width: 450px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #27b7b1;
+  font-weight: 600;
+}
+#prikazi-rashod {
+  position: absolute;
+  top: 28%;
+  width: 450px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  left: 37%;
+  background-color: #ff4e4b;
+  font-weight: 600;
+  margin-top: 10px;
+}
+.cifra-prihod {
+  margin-right: 55px;
+  font-size: 20px;
+}
+.cifra-rashod {
+  margin-left: 250px;
+  font-size: 20px;
+}
+#procenat-rashod {
+  background-color: lightgoldenrodyellow;
+  padding: 2px;
+  border-radius: 4px;
+}
+#section-two {
+  background-color: #a8aab8;
+  height: 60px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#section-two #select {
+  height: 30px;
+  margin-right: 20px;
+}
+#section-two #input-opis {
+  height: 30px;
+  margin-right: 20px;
+  width: 300px;
+  padding-left: 10px;
+}
+#section-two #input-iznos {
+  height: 30px;
+  margin-right: 20px;
+  width: 200px;
+  padding-left: 10px;
+}
+#section-two #ok-button {
+  height: 30px;
+  margin-right: 20px;
+  padding: 0 12px;
+  border-radius: 5px;
+  font-weight: 600;
+  background-color: black;
+  color: white;
+}
+#section-three {
+  background-color: #a8aab8;
+  height: 60px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#section-three #listaPrihoda,
+#section-three #listaRashoda {
+  width: 48%;
+  background-color: navajowhite;
+  font-size: 20px;
+  font-weight: 500;
+  margin-left: 5px;
+  padding: 5px;
+}

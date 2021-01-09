@@ -1,11 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Prigod -rashod aplikacija</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div id="mainDiv">
+      <section id="section-one">
+        <h1>DOSTUPAN BUDZET:</h1>
+        <p id="dostupan-novac">0</p>
+        <br />
+        <div id="prikazi-prihod">
+          <span id="prihod">PRIHOD</span>
+          <span class="cifra-prihod">--</span>
+        </div>
+        <br />
+        <div id="prikazi-rashod">
+          <span id="rashod">RASHOD</span>
+          <span class="cifra-rashod">--</span>
+          <span id="procenat-rashod">10%</span>
+        </div>
+      </section>
+      <section id="section-two">
+          <select id="select">
+              <option value="">izaberi</option>
+              <option value="prihod">prihod</option>
+              <option value="rashod">rashod</option>
+          </select>
+          <span>
+              <input type="text" id="input-opis" placeholder="Opis...">
+              <input type="number" id="input-iznos" placeholder="Iznos...">
+              <button id="ok-button">OK</button>
+          </span>
+      </section>
+      <section id="section-three">
+            <div id="listaPrihoda">
+                <p class="naslov">Prihodi:</p>
+            </div>
+            <div id="listaRashoda">
+                <p class="naslov">Rashodi:</p>
+            </div>
+      </section>
+    </div>
+    <script src="index.js"></script>
+  </body>
 </html>
