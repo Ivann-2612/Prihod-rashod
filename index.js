@@ -1,4 +1,3 @@
-const dostupanNovac = document.querySelector('#dostupan-novac').value
 const cifraPrihod = document.querySelector('.cifra-prihod')
 const cifraRashod = document.querySelector('.cifra-rashod')
 const procenatRashod = document.querySelector('#procenat-rashod')
@@ -54,14 +53,14 @@ btn.addEventListener('click', () =>{
             
         //    }
         //    console.log(sum);   
-            // let sum1 = items1.reduce(sumArray);
-            // let sum2 = items2.reduce(sumArray);
+        const sum1 = items1.reduce(sumArray);
+        const sum2 = items2.reduce(sumArray);
+        const sum3 = sum1 - sum2
+        document.getElementById('dostupanNovac').innerHTML = `${sum3}`
 
-            // document.querySelector('.cifra-prihod').innerHTML = `${sum1} `;
-            // document.querySelector('.cifra-rashod').innerHTML = `${sum2} `;
-            // let sum3 = sum1 - sum2
-            // document.getElementById('#dostupan-novac').innerHTML = `${sum3}`
-}
+        console.log(sum1);
+    }
+
    else if(select.value == 'rashod'){
    cifraRashod.textContent = `- ${inputIznos.value}`
    
@@ -88,14 +87,14 @@ btn.addEventListener('click', () =>{
             div23.innerHTML = `${inputIznos.value} `
 
             items2.push(inputIznos.value * 1);
-
-            // const sum2 = items2.reduce(sumArray);
-            // const sum3 = sum1 - sum2
-            // document.getElementById('stanjeUkupno').innerHTML = `${sum3}`
-            // document.getElementById('rashodiUkupno').innerHTML = `-${sum2} `
-            // dostupanNovac.textContent = cifraPrihod - cifraRashod           
+            const sum1 = items1.reduce(sumArray);
+            const sum2 = items2.reduce(sumArray);
+            const sum3 = sum1 - sum2
+            document.getElementById('dostupanNovac').innerHTML = `${sum3}`
 }
-
+            
+           
+            // dostupanNovac.textContent = cifraPrihod - cifraRashod
 })
 
 
