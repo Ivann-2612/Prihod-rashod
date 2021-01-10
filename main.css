@@ -10,6 +10,7 @@ html {
 
 #section-one {
   display: flex;
+  border: 10px solid gray;
   justify-content: center;
   align-items: center;
   background-color: #a8aab8;
@@ -69,6 +70,7 @@ html {
 #section-two {
   background-color: #a8aab8;
   height: 60px;
+  border: 5px solid gray;
   width: 80%;
   margin-left: auto;
   margin-right: auto;
@@ -108,8 +110,10 @@ html {
 }
 #section-three {
   background-color: #a8aab8;
-  height: 60px;
+  height: auto;
   width: 80%;
+  border: 5px solid gray;
+  padding: 15px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
@@ -124,16 +128,48 @@ html {
   font-size: 20px;
   font-weight: 500;
   margin-left: 5px;
-  padding: 5px;
+  padding: 10px;
   margin: 5px;
   height: auto;
-  background-color: red;
+  background-color: #f1f5f8;
+  font-weight: 600;
 }
-#listaPrihoda {
+
+.mainDiv1 {
   display: flex;
-  text-align: center;
-  flex-wrap: wrap; 
+  justify-content: center;
 }
-.list1cont {
+.div1 {
+  margin-right: 15px;
+  margin-left: 5px;
+}
+.div2 {
+  margin-right: 5px;
+  color:blue;
+}
+.div3 {
+  margin-right: 10px;
+  color: blue;
+}
+.obrisi1 {
+  padding:2px;
+}
+.mainDiv2 {
   display: flex;
+  justify-content: center;
+}
+.div21 {
+  margin-right: 15px;
+  margin-left: 5px;
+}
+.div22 {
+  margin-right: 5px;
+  color: red;
+}
+.div23 {
+  margin-right: 10px;
+  color: red;
+}
+.obrisi2 {
+  padding:2px;
 }
