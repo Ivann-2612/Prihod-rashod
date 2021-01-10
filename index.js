@@ -86,7 +86,25 @@ btn.addEventListener('click', () =>{
             // const sum3 = sum1 - sum2
             // document.getElementById('stanjeUkupno').innerHTML = `${sum3}`
             // document.getElementById('rashodiUkupno').innerHTML = `-${sum2} `
-            //dostupanNovac.innerHTML = cifraPrihod.value - cifraRashod.value
+            // dostupanNovac.textContent = cifraPrihod - cifraRashod           
 }
 
+})
+
+
+
+const btnChangeColor = document.querySelector('#change-color')
+const colors = [' red',' #373737',' darkred',' lime',' cyan',' blue',' yellow',' purple',' orangered',' lightgreen',' pink',' azure','navajowhite','gold','lightgreen','lightgoldenrodyellow','indianred','darkred','beige','aquamarine','cadetblue','darkmagenta']
+
+function getRandomColor() {
+    let random  = Math.floor(Math.random() * colors.length)
+    return random
+}
+console.log(getRandomColor());
+btnChangeColor.addEventListener('click', () => {
+    let randomNumber = getRandomColor()
+    document.body.style.height = '100vh'
+    document.body.style.backgroundColor = colors[randomNumber]
+ 
+   
 })

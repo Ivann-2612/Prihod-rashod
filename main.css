@@ -6,33 +6,47 @@
 html {
   background-color: #f1f5f8;
   font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+body {
+  padding: 20px;
+}
+#section-one,
+#section-two,
+#section-three {
+  border-radius: 10px;
 }
 
+/*------------------------------------ section one -------------------------------- */
 #section-one {
   display: flex;
-  border: 10px solid gray;
+  border: 5px solid gray;
   justify-content: center;
   align-items: center;
-  background-color: #a8aab8;
+  background-color: #a9d2f1;
   height: 270px;
-  width: 80%;
+  width: 65%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 10px;
 }
 #section-one h1 {
   position: absolute;
-  top: 20px;
+  top: 25px;
   margin-top: 10px;
 }
 #section-one #dostupan-novac {
   position: absolute;
-  top: 10%;
+  top: 11%;
   font-size: 40px;
+  background-color: #f9f9f9;
+  padding: 10px;
 }
 #prikazi-prihod {
   position: absolute;
   top: 22%;
+  border-radius: 5px;
   left: 37%;
   height: 40px;
   width: 450px;
@@ -45,6 +59,7 @@ html {
 #prikazi-rashod {
   position: absolute;
   top: 28%;
+  border-radius: 5px;
   width: 450px;
   display: flex;
   justify-content: space-between;
@@ -55,11 +70,11 @@ html {
   margin-top: 10px;
 }
 .cifra-prihod {
-  margin-right: 55px;
+  margin-right: 50px;
   font-size: 20px;
 }
 .cifra-rashod {
-  margin-left: 250px;
+  margin-left: 230px;
   font-size: 20px;
 }
 #procenat-rashod {
@@ -67,12 +82,15 @@ html {
   padding: 2px;
   border-radius: 4px;
 }
+
+/*------------------------------------ section two -------------------------------- */
 #section-two {
-  background-color: #a8aab8;
+  background-color: #a9d2f1;
   height: 60px;
   border: 5px solid gray;
-  width: 80%;
+  width: 65%;
   margin-left: auto;
+  padding: 35px;
   margin-right: auto;
   margin-top: 20px;
   display: flex;
@@ -97,21 +115,31 @@ html {
 }
 #section-two #ok-button {
   height: 30px;
-  margin-right: 20px;
+  margin-right: 10px;
   padding: 0 12px;
   border-radius: 5px;
   font-weight: 600;
-  background-color: black;
-  color: white;
+  background-color:  lightgoldenrodyellow;
+  color: black;
 }
 #section-two #ok-button:hover {
   background-color: gray;
   color: black;
 }
+#change-color {
+  height: 30px;
+  padding: 0 12px;
+  border-radius: 5px;
+  font-weight: 600;
+  background-color:  gold;
+  color: black;
+}
+
+/*------------------------------------ section three -------------------------------- */
 #section-three {
-  background-color: #a8aab8;
+  background-color: #a9d2f1;
   height: auto;
-  width: 80%;
+  width: 65%;
   border: 5px solid gray;
   padding: 15px;
   margin-left: auto;
@@ -142,17 +170,18 @@ html {
 .div1 {
   margin-right: 15px;
   margin-left: 5px;
+  justify-content: left;
 }
 .div2 {
   margin-right: 5px;
-  color:blue;
+  color: #27B7B1;
 }
 .div3 {
   margin-right: 10px;
-  color: blue;
+  color: #27B7B1;
 }
 .obrisi1 {
-  padding:2px;
+  padding: 2px;
 }
 .mainDiv2 {
   display: flex;
@@ -164,12 +193,15 @@ html {
 }
 .div22 {
   margin-right: 5px;
-  color: red;
+  color: #FF4E4B;
 }
 .div23 {
   margin-right: 10px;
-  color: red;
+  color: #FF4E4B;
 }
 .obrisi2 {
-  padding:2px;
+  padding: 2px;
+}
+.hr {
+  width: 300px;
 }
