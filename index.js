@@ -36,6 +36,10 @@ btn.addEventListener('click', () =>{
             obrisi.className = 'obrisi1'
             obrisi.innerHTML = 'x'
             mainDiv.append(div1,div2,div3,obrisi)
+            mainDiv.style.border = '2px solid black'
+            mainDiv.style.padding = '5px'
+            mainDiv.style.marginTop = '4px'
+                
             listaPrihoda.appendChild(mainDiv)
 
             div1.innerHTML = `${inputOpis.value}`
@@ -74,6 +78,9 @@ btn.addEventListener('click', () =>{
             obrisi1.className = 'obrisi2'
             obrisi1.innerHTML = 'x'
             mainDiv2.append(div21,div22,div23,obrisi1)
+            mainDiv2.style.border = '2px solid black'
+            mainDiv2.style.padding = '5px'
+            mainDiv2.style.marginTop = '4px'
             listaRashoda.appendChild(mainDiv2)
 
             div21.innerHTML = `${inputOpis.value}`
@@ -93,18 +100,17 @@ btn.addEventListener('click', () =>{
 
 
 
+
 const btnChangeColor = document.querySelector('#change-color')
-const colors = [' red',' #373737',' darkred',' lime',' cyan',' blue',' yellow',' purple',' orangered',' lightgreen',' pink',' azure','navajowhite','gold','lightgreen','lightgoldenrodyellow','indianred','darkred','beige','aquamarine','cadetblue','darkmagenta']
+const colors = [' red',' #373737',' darkred',' lime',' cyan',' blue',' yellow',' purple',' orangered',' lightgreen',' pink',' azure','navajowhite','gold','lightgreen','lightgoldenrodyellow','indianred','darkred','beige','aquamarine','cadetblue','darkmagenta','black','#141414']
 
 function getRandomColor() {
     let random  = Math.floor(Math.random() * colors.length)
     return random
 }
-console.log(getRandomColor());
+//console.log(getRandomColor());
 btnChangeColor.addEventListener('click', () => {
     let randomNumber = getRandomColor()
     document.body.style.height = '100vh'
     document.body.style.backgroundColor = colors[randomNumber]
- 
-   
 })

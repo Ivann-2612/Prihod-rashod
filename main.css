@@ -8,7 +8,6 @@ html {
   font-family: sans-serif;
   margin: 0;
   padding: 0;
-  overflow: hidden;
 }
 body {
   padding: 20px;
@@ -157,6 +156,7 @@ body {
   font-weight: 500;
   margin-left: 5px;
   padding: 10px;
+  border-radius: 5px;
   margin: 5px;
   height: auto;
   background-color: #f1f5f8;
@@ -204,4 +204,8 @@ body {
 }
 .hr {
   width: 300px;
+}
+#change-color:hover {
+  background-color: navajowhite;
+  color:black;
 }
