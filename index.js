@@ -7,6 +7,7 @@ const select = document.querySelector('#select')
 const btn = document.querySelector('#ok-button')
 const listaPrihoda = document.querySelector('#listaPrihoda')
 const listaRashoda = document.querySelector('#listaRashoda')
+const dostupanNovac = document.querySelector('#dostupan-novac')
 
 //let arrPrihod = []
 let items1 = [];
@@ -26,8 +27,24 @@ btn.addEventListener('click', () => {
                 <div class="div3">${inputIznos.value}</div>
             `
         const obrisi = document.createElement('button')
-        obrisi.className = 'obrisi1'
-        obrisi.innerHTML = 'x'
+        obrisi.style.opacity = '0'
+    
+             
+       obrisi.addEventListener('mouseenter',() => {
+        obrisi.style.opacity = '1'
+        obrisi.style.backgroundColor = 'red'
+        obrisi.style.color = 'white'
+        obrisi.style.padding = '1px 8px'
+           obrisi.innerHTML = 'X'
+         })
+         obrisi.addEventListener('mouseleave',() => {
+            obrisi.style.opacity = '0'
+             
+             })
+        obrisi.addEventListener('click',function () {
+            obrisi.parentElement.remove()
+            // items1.innerHTML = ''
+        })
         mainDiv.append(obrisi)
         mainDiv.style.border = '2px solid black'
         mainDiv.style.padding = '5px'
@@ -43,7 +60,7 @@ btn.addEventListener('click', () => {
 
     else if (select.value == 'rashod') {
         cifraRashod.textContent = `- ${inputIznos.value}`
-
+        
         const mainDiv2 = document.createElement('div')
         mainDiv2.className = 'mainDiv2'
 
@@ -53,8 +70,22 @@ btn.addEventListener('click', () => {
                 <div class="div23">${inputIznos.value}</div>
             `
         const obrisi1 = document.createElement('button')
-        obrisi1.className = 'obrisi2'
-        obrisi1.innerHTML = 'x'
+        obrisi1.style.opacity = '0'
+        obrisi1.addEventListener('mouseenter',() => {
+            obrisi1.style.opacity = '1'
+            obrisi1.style.backgroundColor = 'red'
+            obrisi1.style.color = 'white'
+            obrisi1.style.padding = '1px 8px'
+               obrisi1.innerHTML = 'x'
+             })
+             obrisi1.addEventListener('mouseleave',() => {
+                obrisi1.style.opacity = '0'
+                 
+             })
+             obrisi1.addEventListener('click',function () {
+                obrisi1.parentElement.remove()
+                // items2.textContent = ''
+            })
         mainDiv2.append(obrisi1)
         mainDiv2.style.border = '2px solid black'
         mainDiv2.style.padding = '5px'
@@ -66,10 +97,8 @@ btn.addEventListener('click', () => {
 
 
     }
-    let sum = document.querySelector('#dostupan-novac')
-        sum.innerHTML = items1 - items2
+    document.querySelector('#dostupan-novac').innerHTML = items1 - items2        
 })
-
 
 
 
