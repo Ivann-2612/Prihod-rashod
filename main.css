@@ -48,7 +48,7 @@ body {
   border-radius: 5px;
   left: 37%;
   height: 40px;
-  width: 450px;
+  width: 29%;
   display: flex;
   justify-content: space-between;
   padding: 10px;
@@ -59,7 +59,7 @@ body {
   position: absolute;
   top: 28%;
   border-radius: 5px;
-  width: 450px;
+  width: 29%;
   display: flex;
   justify-content: space-between;
   padding: 10px;
@@ -69,7 +69,7 @@ body {
   margin-top: 10px;
 }
 .cifra-prihod {
-  margin-right: 80px;
+  margin-right: 45px;
   font-size: 20px;
 }
 .cifra-rashod {
@@ -81,7 +81,17 @@ body {
   padding: 2px;
   border-radius: 4px;
 }
-
+#istorija {
+  position: absolute;
+  left: 21.9%;
+  top: 31%;
+}
+#prikazi-istoriju {
+  padding: 5px;
+  border-radius: 4px;
+  background-color: gray;
+  color: navajowhite;
+}
 /*------------------------------------ section two -------------------------------- */
 #section-two {
   background-color: #a9d2f1;
@@ -114,7 +124,7 @@ body {
   height: 30px;
   border-radius: 5px;
   margin-right: 20px;
-  width: 200px;
+  width: 20%;
   padding-left: 10px;
 }
 #section-two #ok-button {
@@ -123,7 +133,7 @@ body {
   padding: 0 12px;
   border-radius: 5px;
   font-weight: 600;
-  background-color:  lightgoldenrodyellow;
+  background-color: lightgoldenrodyellow;
   color: black;
 }
 #section-two #ok-button:hover {
@@ -135,7 +145,7 @@ body {
   padding: 0 12px;
   border-radius: 5px;
   font-weight: 600;
-  background-color:  gold;
+  background-color: gold;
   color: black;
 }
 
@@ -179,11 +189,11 @@ body {
 }
 .div2 {
   margin-right: 5px;
-  color: #27B7B1;
+  color: #27b7b1;
 }
 .div3 {
   margin-right: 10px;
-  color: #27B7B1;
+  color: #27b7b1;
 }
 .obrisi1 {
   padding: 2px;
@@ -198,11 +208,11 @@ body {
 }
 .div22 {
   margin-right: 5px;
-  color: #FF4E4B;
+  color: #ff4e4b;
 }
 .div23 {
   margin-right: 10px;
-  color: #FF4E4B;
+  color: #ff4e4b;
 }
 .obrisi2 {
   padding: 2px;
@@ -212,5 +222,5 @@ body {
 }
 #change-color:hover {
   background-color: navajowhite;
-  color:black;
+  color: black;
 }

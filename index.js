@@ -1,3 +1,5 @@
+import backGround from './changeColor.js'
+
 const cifraPrihod = document.querySelector('.cifra-prihod')
 const cifraRashod = document.querySelector('.cifra-rashod')
 const procenatRashod = document.querySelector('#procenat-rashod')
@@ -8,22 +10,25 @@ const btn = document.querySelector('#ok-button')
 const listaPrihoda = document.querySelector('#listaPrihoda')
 const listaRashoda = document.querySelector('#listaRashoda')
 const dostupanNovac = document.querySelector('#dostupan-novac')
+const btnPrikazIstorije = document.querySelector('#prikazi-istoriju')
 
 //let arrPrihod = []
 let items1 = [];
 let items2 = [];
+let istorija = []
+
+istorija.innerHTML = 
 
 btn.addEventListener('click', () => {
 
     if (select.value == 'prihod') {
-        cifraPrihod.textContent = `+ ${inputIznos.value}`
-
+        
         const mainDiv = document.createElement('div')
         mainDiv.className = 'mainDiv1'
 
         mainDiv.innerHTML = `
                 <div class="div1">${inputOpis.value}</div>
-                <div class="div2">`+ `</div>
+                <div class="div2">`+`</div>
                 <div class="div3">${inputIznos.value}</div>
             `
         const obrisi = document.createElement('button')
@@ -43,6 +48,7 @@ btn.addEventListener('click', () => {
              })
         obrisi.addEventListener('click',function () {
             obrisi.parentElement.remove()
+            cifraPrihod.remove()
             // items1.innerHTML = ''
         })
         mainDiv.append(obrisi)
@@ -53,13 +59,14 @@ btn.addEventListener('click', () => {
         listaPrihoda.appendChild(mainDiv)
 
         items1.push(inputIznos.value * 1);
+        
 
         document.querySelector('.cifra-prihod').innerHTML = items1.reduce((a, b) => a + b, 0)
-        
+        cifraPrihod.textContent = `+ ${inputIznos.value}`
     }
 
     else if (select.value == 'rashod') {
-        cifraRashod.textContent = `- ${inputIznos.value}`
+        
         
         const mainDiv2 = document.createElement('div')
         mainDiv2.className = 'mainDiv2'
@@ -82,10 +89,14 @@ btn.addEventListener('click', () => {
                 obrisi1.style.opacity = '0'
                  
              })
-             obrisi1.addEventListener('click',function () {
+
+             obrisi1.addEventListener('click',remove) 
+             function remove(){
                 obrisi1.parentElement.remove()
+                this.cifraPrihod.remove()
+                // cifraPrihod.textContent = ''
                 // items2.textContent = ''
-            })
+             }
         mainDiv2.append(obrisi1)
         mainDiv2.style.border = '2px solid black'
         mainDiv2.style.padding = '5px'
@@ -93,29 +104,40 @@ btn.addEventListener('click', () => {
         listaRashoda.appendChild(mainDiv2)
 
         items2.push(inputIznos.value * 1);
-        document.querySelector('.cifra-rashod').innerHTML = items2.reduce((a, b) => a + b, 0)
+        
 
+        document.querySelector('.cifra-rashod').innerHTML = items2.reduce((a, b) => a + b, 0)
+        cifraRashod.textContent = `- ${inputIznos.value}`
 
     }
-    document.querySelector('#dostupan-novac').innerHTML = items1 - items2        
+        let ukupnaCifra = document.querySelector('#dostupan-novac') 
+        ukupnaCifra.innerHTML = `+ ${items1 - items2}`       
 })
 
+// btnPrikazIstorije.addEventListener('click', function prikaziIstor() {
+    
+//     istorija.push(items1,items2)
+
+//     let displayNone = document.body.style.display = 'none'
+    
+//     if(displayNone){
+//        const divIst = document.createElement('div')
+//        divIst.className = 'divIst'
+       
+//        divIst.innerHTML = `
+//             <div>
+//                 <li>${items1}</li>
+//                 <li>${items2}</li>
+//             </div>
+//        `
+//        document.body.append(divIst)
+//     }else{
+//         document.body.style.display = 'block'
+//     }
 
 
-//change background color -------------------------------------------------------
-const btnChangeColor = document.querySelector('#change-color')
-const colors = [' red', ' #373737', ' darkred', ' lime', ' cyan', ' blue', ' yellow', ' purple', ' orangered', ' lightgreen', ' pink', ' azure', 'navajowhite', 'gold', 'lightgreen', 'lightgoldenrodyellow', 'indianred', 'darkred', 'beige', 'aquamarine', 'cadetblue', 'darkmagenta', 'black', '#141414']
+//     console.log(istorija);
+// })
 
-function getRandomColor() {
-    let random = Math.floor(Math.random() * colors.length)
-    return random
-}
-//console.log(getRandomColor());
-btnChangeColor.addEventListener('click', () => {
-    let randomNumber = getRandomColor()
-    document.body.style.height = '100vh'
-    document.body.style.backgroundColor = colors[randomNumber]
-    document.querySelector('#change-color').style.backgroundColor = colors[randomNumber]
-    // document.querySelector('h1').style.color = colors[randomNumber]
 
-})
+
